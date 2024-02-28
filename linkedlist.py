@@ -31,7 +31,7 @@ class Linkedlist:
         if self.length == 0:
             return None
         temp = self.head
-        pre = self.tail
+        pre = self.head
         while (temp.next):
             pre = temp
             temp = temp.next
@@ -81,7 +81,7 @@ class Linkedlist:
         return False
     
     def insert(self, index, value):
-        if index < 0 or index >= self.length:
+        if index < 0 or index > self.length:
             return False
         if index == 0:
             return self.prepend(value)
